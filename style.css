@@ -693,3 +693,102 @@ form {
     font-size: 18px;
     text-transform: uppercase;
 }
+
+/* БЛОК ДЛЯ ЗАПРОСА ДОПОЛНИТЕЛЬНОЙ ИНФОРМАЦИИ (КОНЕЦ) */
+
+/* БЛОК FOOTER (НАЧАЛО) */
+
+.footer {
+    height: 880px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.footer__header {
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 140%;
+    color: #FFFFFF;   
+    min-width: 1250px;
+    height: 230px;
+}
+
+.footer__header span {
+    color: #FFCB05;
+}
+
+.footer__info {
+    display: flex;
+    justify-content: space-between;
+    min-width: 1250px;
+    line-height: 40px;
+    font-size: 18px;
+    min-height: 230px;
+}
+
+.footer__info h3 {
+    color: white;
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;   
+    justify-content: space-between;
+}
+
+.Midland {
+    height: 200px;
+}
+
+.dop {
+    margin-left: 100px;
+}
+
+.dop a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.footer__desc p {
+    position: absolute;
+}
+
+.footer__first-desc {
+    left: 160px;
+    top: 790px;
+    font-weight: bold;
+}
+
+.footer__second-desc {
+    left: 1400px;
+    top: 790px;
+    font-weight: bold;
+}
+
+.footer__third-desc {
+    left: 1650px;
+    top: 790px;
+}
+
+.footer__third-desc a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.footer__img {
+    position: absolute;
+    left: 1362px;
+    top: 448px;
+}
+
+.footer__img-in {
+    position: absolute;
+    top: 790px;
+    left: 1361px;
+}
