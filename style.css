@@ -34,9 +34,11 @@
     font-weight: normal;
 }
 
-body,
-html {
+
+html, 
+body {
     width: 1920px;
+    font-size: 16px;
 }
 
 .wrap-title {
@@ -64,11 +66,19 @@ html {
     justify-content: center;
 }
 
+.header__wrap-links {
+    font-size: 12px;
+}
+
 .header__links {
     width: 423px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
+}
+
+.header__link {
+    text-transform: uppercase;   
 }
 
 .header__wrap-links {
