@@ -39,18 +39,20 @@ body {
   height: 1080px;
   position: relative;
 }
-.wrap-title .header {
+
+.header {
   height: 80px;
   display: flex;
+  background-color: black;
 }
-.wrap-title .header .header__btn {
+.header .header__btn {
   width: 80px;
   height: 80px;
   background-color: #5C6266;
   text-align: center;
   line-height: 80px;
 }
-.wrap-title .header .header__conteiner-img {
+.header .header__conteiner-img {
   width: 162px;
   height: 78px;
   display: flex;
@@ -58,22 +60,22 @@ body {
   justify-content: center;
   align-items: center;
 }
-.wrap-title .header .header__wrap-links {
+.header .header__wrap-links {
   font-size: 0.75rem;
 }
-.wrap-title .header .header__links {
+.header .header__links {
   width: 423px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.wrap-title .header .header__link {
+.header .header__link {
   text-transform: uppercase;
   color: white;
   text-decoration: none;
 }
-.wrap-title .header .header__wrap-links {
+.header .header__wrap-links {
   width: 1600px;
   display: flex;
   flex-direction: row;
@@ -81,7 +83,7 @@ body {
   align-items: center;
   margin-left: auto;
 }
-.wrap-title .header .header__numbers {
+.header .header__numbers {
   width: 516px;
   display: flex;
   flex-direction: row;
@@ -89,10 +91,11 @@ body {
   align-items: center;
   color: white;
 }
-.wrap-title .header .header__numbers .phone-number {
+.header .header__numbers .header-link a {
   font-weight: lighter;
 }
-.wrap-title .wrap-title__background {
+
+.wrap-title__background {
   position: absolute;
   z-index: -1;
   left: 0;
@@ -102,7 +105,8 @@ body {
   background-color: black;
   width: 1920px;
 }
-.wrap-title .wrap-content-title {
+
+.wrap-content-title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -111,7 +115,7 @@ body {
   padding-left: 160px;
   padding-right: 55px;
 }
-.wrap-title .wrap-content-title .content-title {
+.wrap-content-title .content-title {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -119,7 +123,7 @@ body {
   width: auto;
   min-height: 260px;
 }
-.wrap-title .wrap-content-title .content-title .content-title__caption {
+.wrap-content-title .content-title .content-title__caption {
   font-size: 96px;
   font-style: normal;
   font-weight: bold;
@@ -128,11 +132,11 @@ body {
   text-transform: none;
   text-decoration: none;
 }
-.wrap-title .wrap-content-title .content-title .content-title__caption span {
+.wrap-content-title .content-title .content-title__caption span {
   color: #FFCB05;
   font-weight: inherit;
 }
-.wrap-title .wrap-content-title .content-title .content-title__caption-text {
+.wrap-content-title .content-title .content-title__caption-text {
   font-size: 25px;
   font-style: normal;
   font-weight: normal;

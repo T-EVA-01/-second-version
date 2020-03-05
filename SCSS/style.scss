@@ -44,47 +44,49 @@ body {
 .wrap-title {
   height: 1080px;
   position: relative;
-  .header {
+} 
+.header {
+  height: 80px;
+  display: flex;
+  background-color:$colorB;
+  .header__btn {
+    width: 80px;
     height: 80px;
-    display: flex;
-    .header__btn {
-      width: 80px;
-      height: 80px;
-      background-color: #5C6266;
-      text-align: center;
-      line-height: 80px;
-    }
-    .header__conteiner-img {
-      width: 162px;
-      height: 78px;
-      @include flex;
-    }
-    .header__wrap-links {
-      font-size: 0.75rem;
-    }
-    .header__links {
-      width: 423px;
-      @include flex ($content:space-between);
-    }
-    .header__link {
-      text-transform: uppercase;
-      color: $colorW;
-      text-decoration: none;   
-    }
-    .header__wrap-links {
-      width: 1600px;
-      @include flex ($content:space-between);
-      margin-left: auto;
-    }
-    .header__numbers {
-      width: 516px;
-      @include flex ($content:space-around);
-      color: $colorW;
-      .phone-number {
-        font-weight: lighter;
-      }
+    background-color: #5C6266;
+    text-align: center;
+    line-height: 80px;
+  }
+  .header__conteiner-img {
+    width: 162px;
+    height: 78px;
+    @include flex;
+  }
+  .header__wrap-links {
+    font-size: 0.75rem;
+  }
+  .header__links {
+    width: 423px;
+    @include flex ($content:space-between);
+  }
+  .header__link {
+    text-transform: uppercase;
+    color: $colorW;
+    text-decoration: none;   
+  }
+  .header__wrap-links {
+    width: 1600px;
+    @include flex ($content:space-between);
+    margin-left: auto;
+  }
+  .header__numbers {
+    width: 516px;
+    @include flex ($content:space-around);
+    color: $colorW;
+    .header-link a {
+      font-weight: lighter;
     }
   }
+}  
   .wrap-title__background {
     @include position ($index:-1);
     background-color: $colorB;
@@ -111,7 +113,7 @@ body {
       }
     }
   }
-}
+
 
 .wrap-aside {
   height: 545px;
