@@ -1,0 +1,544 @@
+// Comment
+@import "mixins.scss";
+@import "variables.scss";
+@font-face {
+  font-family: 'Open Sans';
+  src: url('fonts/OpenSans-Bold.eot');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans';
+  src: url('fonts/OpenSans-Regular.eot');
+  font-weight: normal;
+  font-style: normal;   
+}
+
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url('/fonts/GothamPro-Bold.woff');
+  font-weight: normal;
+  font-style: normal;   
+}
+
+@font-face {
+  font-family: 'TT Firs Neue';
+  src: url('/fonts/TTFirsNeue-Bold.eot');
+  font-weight: normal;
+  font-style: normal;   
+}
+
+* { 
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+html,
+body {
+  width: $widthpage;
+}
+
+.wrap-title {
+  height: 1080px;
+  position: relative;
+  .header {
+    height: 80px;
+    display: flex;
+    .header__btn {
+      width: 80px;
+      height: 80px;
+      background-color: #5C6266;
+      text-align: center;
+      line-height: 80px;
+    }
+    .header__conteiner-img {
+      width: 162px;
+      height: 78px;
+      @include flex;
+    }
+    .header__wrap-links {
+      font-size: 0.75rem;
+    }
+    .header__links {
+      width: 423px;
+      @include flex ($content:space-between);
+    }
+    .header__link {
+      text-transform: uppercase;
+      color: $colorW;
+      text-decoration: none;   
+    }
+    .header__wrap-links {
+      width: 1600px;
+      @include flex ($content:space-between);
+      margin-left: auto;
+    }
+    .header__numbers {
+      width: 516px;
+      @include flex ($content:space-around);
+      color: $colorW;
+      .phone-number {
+        font-weight: lighter;
+      }
+    }
+  }
+  .wrap-title__background {
+    @include position ($index:-1);
+    background-color: $colorB;
+    width: $widthpage;
+  }
+  .wrap-content-title {
+    @include flex ($content:space-between);
+    margin-top: 320px;
+    padding-left: 160px;
+    padding-right: 55px;
+    .content-title {
+      @include flex ($content:space-between, $directional:column, $items:none);
+      width: auto;
+      min-height: 260px;
+      .content-title__caption {
+        @include font($size:96px, $weight:bold, $lineHeight:140%, $color: $colorW);
+        & span {
+          color: $colorO;
+          font-weight: inherit;
+        }
+      }
+      .content-title__caption-text {
+        @include font($size:25px, $lineHeight:205%, $color: $colorW);
+      }
+    }
+  }
+}
+
+.wrap-aside {
+  height: 545px;
+  @include flex;
+  .aside {
+    min-height: 280px;
+    .aside__title { 
+      @include font($size:18px, $lineHeight:205%, $color: $colorB, $weight: bold);
+      text-transform: uppercase;
+      margin-bottom: 70px;
+    }
+    .aside__excerpt {
+      @include font($size:25px, $lineHeight:205%, $color: $colorB);
+      margin-left: 60px;
+      margin-bottom: 18px;
+    }
+  }
+}
+//Кнопка LEARN MORE
+.button-link {
+  height: 60px;
+  width: 160px;
+  @include flex ($content: none);
+  margin-left: 60px;
+  & .button-link__item {
+    @include font($transform:uppercase, $lineHeight:16px);
+    & .button-link__img {
+      @include LEARN-MORE;
+    }
+  }
+}
+
+.white-img {
+  color: $colorW;
+  background-image: url(/icons/buttom__img__white.svg);
+}
+
+.black-img {
+  $color:$colorB;
+  background-image: url(/icons/buttom__img__black.svg);
+}
+
+.content {
+  @include flex ($directional:none, $items:none);
+  & .content__box {
+    position: relative;
+    flex-basis: 640px;
+    height: 760px;
+    @include flex($directional: column, $content:space-between, $items: none);
+    .content-bottom {
+      @include flex ($directional: column, $content: space-between, $items: none)
+    }
+    & .wrap-button {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .background-content {
+      @include position ($index:-1);
+      background-color: $colorB;
+    }
+    & .tools__box {
+      @include flex($directional: column, $content: space-between, $items: none);
+      min-height: 200px;
+      margin:  60px 0 0 60px;
+      .tools__header {
+        @include font($size:36px, $weight:bold, $color: $colorW, $lineHeight:120%)
+      }
+      .tools__links {
+        @include flex ($directional:column, $content:space-between, $items: none);
+        min-height: 110px; 
+        list-style-type: none;
+        .tools__link {
+          @include font($color:$colorW, $transform:uppercase, $weight:bold, $size:12px, $lineHeight: 180%);
+          .tools_img {
+            @include tools-img;
+          }
+        }
+      }
+    } 
+    .software-productc__header,
+    .other-products__header {
+      @include font($size: 36px, $weight:bold, $lineHeight:140%, $color: $colorW);
+      margin-top: 60px;
+      margin-left: 75px;
+    }
+    .other-products__header {
+      margin-left: 47px;
+    }  
+  }
+}
+
+.wrap-information {
+  @include flex;
+  height: 1135px;
+  background-color: $colorW;
+  .information {
+    height: 828px;
+    width: 1280px;
+    display: grid;
+    grid-template-columns: 640px 640px;
+    grid-template-rows: 414px 414px;
+    grid-template-areas: 
+    "a b"
+    "c d";
+    position: relative;
+    .information__content {
+      z-index: 2;
+    }
+    .new-tech {
+      grid-area: a;
+      .information__new-tech {
+        @include font ($weight:bold, $size:45px, $lineHeight:160%);
+        margin-top: 78px;
+      }
+    }
+    .new-tech-description {
+      grid-area: b;
+      .information__new-tech-description {
+        @include font ($size:25px, $lineHeight:180%);
+        margin-top: 78px;
+      }
+    }
+    .service {
+      grid-area: c;
+      .information__service {
+        @include font ($size:18px, $lineHeight:180%); 
+        & span {
+          font-family: TT Firs Neue;
+          @include font ($size:60px, $lineHeight:205%, $weight:bold);
+          margin-right: 30px;
+        }
+        &:first-child {
+          margin-top: 56px;
+        }
+        &:first-child span{
+          margin-right: 60px;
+        }
+      }
+    }
+    .offices {
+      grid-area: d;
+      display: flex;
+      .information__offices {
+        @include font($size:18px, $lineHeight:180%);
+        margin-top: 56px;
+        & span {
+          font-family: TT Firs Neue;
+          @include font($size:160px, $lineHeight:110%, $weight:bold);
+        }
+        &:first-child span {
+          margin-right: 100px;
+        }
+      }
+    }
+  }
+  .wrap-information__background {
+    @include position ($left:188px, $index:1);
+  }
+  .wrap-information__line {
+    @include position($top:374px, $index:2);
+  }
+}
+
+.map {
+  height: 780px;
+  background-color: $colorB;
+  @include flex($directional:column, $content:flex-start, $items: none);
+  .map__buttons {
+    margin-top: 70px;
+    margin-left: 965px;
+    .map__button {
+      display: inline-block;
+      margin-left: 55px;
+      @include font($weight: bold, $size:16px, $lineHeight:160%, $color:$colorW);
+    }
+  }
+  .map__wrap-content {
+    @include flex($content:flex-start, $items: none);
+    margin-top: 190px;
+    .map__wrapper {
+      margin-left: 320px;
+      width: 560px;
+      .map__header {
+        margin-bottom: 30px;
+        @include font($color:$colorW, $size:45px, $weight:bold, $lineHeight:140%);
+        & span {
+          color: $colorO;
+        }
+      }
+      & .button-link {
+        margin-left: 0;
+      }
+    }
+    .map__line {
+      margin-left: 80px;
+      width: 3px;
+      .map__img {
+        margin-top: 15px;
+      }
+    }
+    .map__text {
+      margin-left: 80px;
+      .map__text-header,
+      .map__text-paragraph {
+        @include font ($size: 24px, $weight:bold, $lineHeight:218%, $color: $colorW);
+      }
+      .map__text-paragraph {
+        font-weight: 100;
+      }
+    }
+  }
+}
+
+.news {
+  height: 1126px;
+  background-color: $colorW;
+  .news__header {
+    @include font ($weight:bold, $size:45px, $lineHeight:140%);
+    margin-bottom: 85px;
+    margin-top: 180px;
+    margin-left: 320px;
+  }
+  .columns {
+    @include flex;
+    .wrap-column {
+      @include flex($items:none);
+      width: 600px;
+      height: 620px;
+      .column {
+        @include flex($items:none, $directional:column, $content:start);
+        width: 560px;
+        .column__date {
+          @include font($color:$colorB, $weight:bold, $size:14px, $lineHeight:218%);  
+          margin-bottom: 20px;  
+        }
+        .column__excerpt {
+          position: relative;
+          height: 390px;
+          .column__header {
+            @include font($color:$colorW, $weight:bold, $size:45px, $lineHeight:120%);
+            @include position ($left:37px, $top:93px, $index:2);
+          }
+          .column__img {
+            @include position;
+          }
+        }
+        .column__text {
+          @include font($color:$colorB, $size:18px, $lineHeight:218%);
+          width: 480px;
+          margin-top: 60px;
+        }
+        &:last-child .column__img {
+          width: 560px;
+          height: 390px;
+        }
+      }
+    }
+  }
+}  
+
+.text-arena {
+  min-height: 1000px;
+  @include flex($items:none);
+  .request {
+    @include flex;
+    width: 1600px;
+    height: 820px;
+    background-color: $colorG;
+    .request__inner {
+      @include flex($directional:column, $items:none, $content:space-between);
+      width: 1280px;
+      min-height: 660px;
+      .request__header {
+        @include font($weight:bold, $size:45px, $lineHeight:140%);
+      }
+      & form {
+        @include flex($directional:column, $items:none, $content:space-between);
+        height: 500px;
+        .imput-fields {
+          display: grid;
+          grid-template-columns: 600px 600px;
+          grid-template-rows: 40px 40px 40px 40px;
+          column-gap: 80px; 
+          row-gap: 70px;
+          grid-template-areas: 
+          "one one"
+          "two three"
+          "four five"
+          "six six";
+          .first-field {
+            grid-area: one;  
+          }
+          .second-field {
+            grid-area: two;
+          }
+          .third-field {
+            grid-area: three;
+          }
+          .fourth-field {
+            grid-area: four;
+          }
+          .fifth-field {
+            grid-area: five;
+          }
+          .sixth-field {
+            grid-area: six;
+          }
+          & input,
+            select{
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 2px solid black;
+            background-color: $colorG; 
+            @include font ($size:18px, $lineHeight:218%, $color:$colorB);
+          }
+          .imput-field__first-type {
+            width: 1280px;
+            height: 40px;   
+          }
+          .imput-field__second-type {
+            width: 600px;
+            height: 40px;
+          }
+        }
+        .buttom-send {
+          @include flex($content:space-between);
+          & label {
+            @include flex($content:start);
+            .check-mark {
+              width: 18px;
+              height: 18px;
+            }
+            .buttom-send__text {
+              display: inline-block;
+              margin-left: 20px;
+              letter-spacing: 0.1em;
+              @include font($size:14px, $lineHeight:31px, $transform:uppercase, $color:$colorB);
+            }
+          }
+          & .buttom-send__submit {
+            width: 200px;
+            height: 60px;
+            border: 2px solid #000000;
+            box-sizing: border-box;
+            @include font($size:18px, $transform:uppercase);
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  height: 880px;
+  background-color: $colorB;
+  @include flex($content:start);
+  .wrap__footer {
+    width: 1600px;
+    height: 665px;
+    .footer__header {
+      @include font($weight:bold, $size:72px, $lineHeight:140%, $color:$colorW); 
+      min-width: 1250px;
+      height: 230px;
+      margin-left: 325px;
+      & span {
+        color: $colorO;
+        font-weight: bold;
+      }
+    }
+    .footer__info {
+      @include flex($content:start, $items:none);
+      min-width: 1370px;
+      min-height: 230px;
+      line-height: 40px;
+      font-size: 18px; 
+      margin-top: 80px;
+      margin-left: 325px;
+      & h3, p, a {
+        color:$colorW;
+      }
+      .footer__links {
+        @include flex ($directional:column, $content:space-between, $items:none);
+        height: 250px;
+      }
+      .Houstion {
+        margin-right: 250px;
+        max-width: 400px;
+      }
+      .Midland {
+        width: 200px;
+        height: 230px;
+      }
+      .footer__img {
+        margin-right: 37px;
+        margin-left: 400px;
+      }
+      .dop {
+        height: 230px;
+        a {
+          @include font($decoration:none, $color:$colorW, $transform:uppercase);
+        }
+      } 
+    }
+    .footer__desc {
+      margin-top: 100px;
+      width: 1600px;
+      @include flex($content:start);
+      margin-left: 160px;
+      p:nth-child(1)  {
+        @include font($weight:bold, $size:12px, $lineHeight:160%, $color:$colorW);
+      }
+      p:nth-child(2)  {
+        @include font($weight:bold, $size:14px, $lineHeight:34px, $transform:capitalize, $color:$colorW);
+        margin-left: 960px;
+        span {
+          @include footer-img;
+        }  
+      }
+      p:nth-child(3)  {
+        @include font($size:14px, $lineHeight:32px, $color:$colorW);
+        margin-left: 200px;
+        & a {
+          @include font($decoration:none, $color:$colorW, $weight:bold, $size:14px, $lineHeight:32px);
+        }
+      }
+    }
+  }
+}
+  

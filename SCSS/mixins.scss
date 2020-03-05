@@ -1,0 +1,46 @@
+@mixin flex($directional: row, $content: center, $items: center) {
+    display: flex;
+    flex-direction: $directional;
+    justify-content: $content;
+    align-items: $items;
+}
+
+@mixin font($size:16px, $style:normal, $weight:normal, $color:$colorB, $lineHeight:100%, $transform:none, $decoration: none) {
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+    color: $color;
+    line-height: $lineHeight;
+    text-transform: $transform;
+    text-decoration: $decoration;
+}
+
+@mixin position($position: absolute, $index:0, $left:0, $top:0, $bottom:0, $right:0) {
+    position: $position;
+    z-index: $index;
+    left: $left;
+    top: $top;
+    bottom: $bottom;
+    right: $right;
+}
+
+@mixin LEARN-MORE{
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 0px 30px 0px 0px;
+    font-weight: bold;
+}
+
+@mixin tools-img{
+    background-image: url(/icons/tools_img.svg); 
+    background-repeat: no-repeat;
+    background-position: left;
+    padding: 0px 0px 0px 20px; 
+}
+
+@mixin footer-img{
+    background-image: url(/icons/footer__img-in.svg); 
+    background-repeat: no-repeat;
+    background-position: left;
+    padding: 0px 0px 0px 40px; 
+}
