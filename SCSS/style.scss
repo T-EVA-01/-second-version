@@ -330,6 +330,7 @@ body {
 .news {
   height: 1126px;
   background-color: $colorW;
+  padding-top: 1px;
   .news__header {
     @include font ($weight:bold, $size:45px, $lineHeight:140%);
     margin-bottom: 85px;

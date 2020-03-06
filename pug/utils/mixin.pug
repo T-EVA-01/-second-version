@@ -32,11 +32,11 @@ mixin contentBoxTwo(classBox, Classheader, Text, classbottom, img)
         img(src=img, alt="", class="background-content")
 
 
-mixin columnOne(date, headerColumn, img, textColumn)
+mixin columnOne(date, headerColumn, scrin, textColumn)
     .wrap-column
         .column
             p.column__date!= date
             .column__excerpt
                 h3.column__header!= headerColumn
-                img(scr=img, alt="", class="column__img") 
+                img(scr= scrin, alt="", class="column__img") 
             p.column__text!= textColumn  

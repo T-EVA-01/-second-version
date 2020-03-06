@@ -499,6 +499,7 @@ body {
 .news {
   height: 1126px;
   background-color: white;
+  padding-top: 1px;
 }
 .news .news__header {
   font-size: 45px;
