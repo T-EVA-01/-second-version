@@ -1,1 +1,32 @@
+mixin contentBox(classBox, Clbox, Classheader, classbottom)
+    .content__box(class=classBox)
+        div(class=Clbox)
+            h2(class=Classheader) MWD/LWD Tools
+            ul.tools__links
+                li
+                    a(href="#", class="tools__link")!="<span></span>" + "Intelligent Pulser Gamma Module (iPGM)" 
+                li        
+                    a(href="#", class="tools__link")!="<span></span>" + "Intelligent Directional Module (IDM)"
+                li        
+                    a(href="#", class="tools__link")!="<span></span>" + "Guide MWD Surface System" 
+        div(class=classbottom + " content-bottom")
+            .line
+                img(src="/icons/line__img.svg", alt="", class="line__img")
+            div(class="wrap-button button-link")
+                a(target="_blank", href="#", class="button-link__item")
+                    span(class="button-link__img white-img") Learn more
+        img(src="/img2/background-content_first.png", alt="", class="background-content")
 
+        //- Как задать класс span-у, вложенному таким способом ul li a span(classs=?)?
+
+
+mixin contentBoxTwo(classBox, Classheader, Text, classbottom, img)
+    .content__box(class=classBox)
+        h2(class=Classheader)!= Text
+        div(class=classbottom + " content-bottom")
+            .line
+                img(src="/icons/line__img.svg", alt="", class="line__img")
+            div(class="wrap-button button-link")
+                a(target="_blank", href="#", class="button-link__item")
+                    span(class="button-link__img white-img") Learn more
+        img(src=img, alt="", class="background-content")

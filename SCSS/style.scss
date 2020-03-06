@@ -187,7 +187,7 @@ body {
         list-style-type: none;
         .tools__link {
           @include font($color:$colorW, $transform:uppercase, $weight:bold, $size:12px, $lineHeight: 180%);
-          .tools_img {
+          & span {
             @include tools-img;
           }
         }

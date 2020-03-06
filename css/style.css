@@ -281,7 +281,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
 }
-.content .content__box .tools__box .tools__links .tools__link .tools_img {
+.content .content__box .tools__box .tools__links .tools__link span {
   background-image: url(/icons/tools_img.svg);
   background-repeat: no-repeat;
   background-position: left;

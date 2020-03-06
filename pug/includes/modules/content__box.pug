@@ -1,0 +1,21 @@
+mixin contentBox(class-box)
+    .content__box(class=class-box)
+        .tools__box
+            h2.tools__header MWD/LWD Tools
+            if(class-box="tools")
+                ul.tools__links
+                    li
+                        a(href="#", class="tools__link")!="<span></span>" + "Intelligent Pulser Gamma Module (iPGM)" 
+                    li        
+                        a(href="#", class="tools__link")!="<span></span>" + "Intelligent Directional Module (IDM)"
+                    li        
+                        a(href="#", class="tools__link")!="<span></span>" + "Guide MWD Surface System"
+        div(class="tools__bottom content-bottom")
+            .line
+                img(src="/icons/line__img.svg", alt="", class="line__img")
+            div(class="wrap-button button-link")
+                a(target="_blank", href="#", class="button-link__item")
+                    span(class="button-link__img white-img") Learn more
+        img(src="/img2/background-content_first.png", alt="", class="background-content")
+
+        //- Как задать класс span-у, вложенному таким способом ul li a span(classs=?)?
