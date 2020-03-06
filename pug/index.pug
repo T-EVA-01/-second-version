@@ -6,10 +6,6 @@ block variables
     - var classAlfaHeaderP = "header__number"
     - var classTools = true
 
-block content   
+block content
     include ../pug/includes/modules/aside.pug
-    .content
-        +contentBox("tools", "tools__box", "tools__header", "tools__bottom")
-        +contentBoxTwo("software-products", "software-productc__header", "Software Products", "software-products__bottom", "/img2/background-content_second.png")
-        +contentBoxTwo("other-products", "other-products__header", "Complete MWD<br> Kits and Other<br> Products", "other-products__bottom", "/img2/background-content_third.png")
-        //- include ../pug/includes/modules/content__box.pug
+    include ../pug/includes/modules/content__box.pug
