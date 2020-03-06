@@ -1,0 +1,27 @@
+.text-arena
+    .request
+        .request__inner
+            h2.request__header Request More Information
+            form(action="#", method="post")
+                .request__imput(class="imput-fields")
+                    .imput-fields__field(class="first-field")
+                        input.imput-field__first-type(type="text", name="name", placeholder="Name")
+                    .imput-fields__field(class="second-field")
+                        input.imput-field__second-type(type="text", name="company", placeholder="Company")
+                    .imput-fields__field(class="third-field")
+                        select.imput-field__second-type(name="business")
+                            option(value="Business Segment") Business Segment
+                            option(value="Another") Another Business Segment
+                    .imput-fields__field(class="fourth-field")
+                        input.imput-field__second-type(type="text", name="email", placeholder="Email")
+                    .imput-fields__field(class="fifth-field")
+                        input.imput-field__second-type(type="text", name="phone-number", placeholder="Phone-number", required)              
+                    .imput-fields__field(class="sixth-field")
+                        input.imput-field__first-type(type="text", name="comment", placeholder="Comment")
+                .buttom-send
+                    .buttom-send__check-mark
+                        label
+                            input.check-mark(type="checkbox", name="check-mark", checked)
+                            p.buttom-send__text I give consent for my personal data to be processed
+                    .buttom-send__buttom
+                        input.buttom-send__submit(type="submit", name="submit-form", value="send")        
