@@ -196,6 +196,27 @@ body {
   width: auto;
   min-height: 260px;
 }
+
+@keyframes top {
+  from {
+    margin-bottom: 200px;
+    opacity: 0;
+  }
+  to {
+    margin-bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes opac {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .wrap-content-title .content-title .content-title__caption {
   font-size: 96px;
   font-style: normal;
@@ -204,6 +225,9 @@ body {
   line-height: 140%;
   text-transform: none;
   text-decoration: none;
+  animation-name: top;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
 }
 .wrap-content-title .content-title .content-title__caption span {
   color: #FFCB05;
@@ -217,6 +241,9 @@ body {
   line-height: 205%;
   text-transform: none;
   text-decoration: none;
+  animation-name: opac;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
 }
 
 .wrap-aside {
