@@ -30,6 +30,42 @@
   font-weight: normal;
 }
 
+@keyframes one {
+  from {
+    r: 0px;
+  }
+  to {
+    r: 1185px;
+  }
+}
+
+@keyframes two {
+  from {
+    r: 0px;
+  }
+  to {
+    r: 894px;
+  }
+}
+
+@keyframes three {
+  from {
+    r: 0px;
+  }
+  to {
+    r: 302px;
+  }
+}
+
+@keyframes four {
+  from {
+    r: 0px;
+  }
+  to {
+    r: 180px;
+  }
+}
+
 html,
 body {
   width: 1920px;
@@ -38,6 +74,43 @@ body {
 .wrap-title {
   height: 1080px;
   position: relative;
+}
+
+.circles {
+  position: absolute;
+  stroke-width: 2; 
+  stroke: #FFCE35;
+}
+
+.circle-one {
+  animation-name: one;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.circle-two {
+  animation-name: two;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: .5s;
+  animation-fill-mode: forwards;
+}
+
+.circle-three {
+  animation-name: three;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+.circle-four {
+  animation-name: four;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
 }
 
 .header {
