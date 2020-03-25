@@ -42,27 +42,33 @@
 @keyframes two {
   from {
     r: 0px;
+    opacity: 1;
   }
   to {
     r: 894px;
+    opacity: .8;
   }
 }
 
 @keyframes three {
   from {
     r: 0px;
+    opacity: 1;
   }
   to {
     r: 302px;
+    opacity: .6;
   }
 }
 
 @keyframes four {
   from {
     r: 0px;
+    opacity: 1;
   }
   to {
     r: 180px;
+    opacity: 0.4;
   }
 }
 
@@ -228,6 +234,9 @@ body {
   animation-name: top;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
+  animation-delay: 3.5s;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 .wrap-content-title .content-title .content-title__caption span {
   color: #FFCB05;
@@ -244,8 +253,10 @@ body {
   animation-name: opac;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
+  animation-delay: 3.5s;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
-
 .wrap-aside {
   height: 545px;
   display: flex;
